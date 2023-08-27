@@ -115,10 +115,10 @@ def predict_probability(features, weights):
   Calculates the probability an observation has of belonging to a class.
 
   Args:
-      features (ndarray): Values of M features of an observation to predict. ( , M)
+      features (ndarray): Values of M features of N observations to predict. (N, M)
                           Both dimensions should be >= 1. For predictions of single
                           observations use features.reshape(1, -1) or [[values]].
-      weights (ndarray):  Adjusted weights to the data. ( , M)
+      weights (ndarray):  Adjusted weights to the data. (M, )
 
   Returns:
       (ndarray[float]): Probabilities of observation of belonging to a class, calculated with a
@@ -138,10 +138,10 @@ def predict(features, weights, threshold = 0.5, className = ''):
   belongs to a class based ona threshold.
 
   Args:
-      features (ndarray): Values of M features of an observation to predict. ( , M)
+      features (ndarray): Values of M features of N observations to predict. (N, M)
                           Both dimensions should be >= 1. For predictions of single
                           observations use features.reshape(1, -1) or [[values]].
-      weights (ndarray): Adjusted weights to the data. ( , M)
+      weights (ndarray): Adjusted weights to the data. (M, )
       threshold (int, optional): Minimum probaility to consider an observation as part of a class.
                        Defaults to 0.5.
       className (str): Name of the class to be predicted
@@ -311,8 +311,8 @@ de datos en especifico. Esto fue debido principalmente a que, al ser un dataset 
 hay un gran desbalance en la cantidad de canciones que si pertenecen al genero Rock, y a las que no. Es por esto
 que aunque tenemos un accuracy del 70%, en nuestra matriz de confusion podemos observar que hay un gran numero de
 FALSOS NEGATIVOS: al haber demasiados casos en donde la cancion no pertenece a la clase, el modelo aprendió que
-clasificando la mayoria como que no pertenece, va a acertar con més predicciones. El recall es muy bajo por lo
-mismo: no tiene una gran cantidad de aciertos a casos positivos, por que no hay tantos casos positivos. 
+clasificando la mayoria como que no pertenece, va a acertar con más predicciones. El recall es muy bajo por lo
+mismo: no tiene una gran cantidad de aciertos a casos positivos por que no hay tantos casos positivos. 
 
 Otra razon que explica el pobre desempeño del modelo es la cantidad de variables. Inicialmente se tenian 25 
 variables que fueron reducidas a 11, pero este sigue siendo un numero muy alto de features. Por ello, debe modificarse
