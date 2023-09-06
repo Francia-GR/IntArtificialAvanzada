@@ -9,3 +9,5 @@ Implementación de Modelos de Machine Learning
 * **data_preprocessing.ipynb**: Notebook que presenta el análisis y la limpieza inicial realizado sobre *train.csv* para obtener el archivo *music_data.csv*.
 
 * **train.csv**: Datos originales tomados de [Music Genre Classification Challenge](https://www.kaggle.com/datasets/purumalgi/music-genre-classification). Solamente se utilizó el set de entrenamiento puesto que, al ser un reto de Kaggle, el set de *test* no tiene los valores reales de las observaciones a predecir.
+
+* **Analisis_Normatividad.pdf**: Reporte acerca de la normatividad a la que está sujeto el conjunto de datos seleccionado para la implementación de regresión logística como solución para un problema de clasificación binaria.
