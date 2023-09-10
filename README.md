@@ -8,6 +8,8 @@ Implementación de Modelos de Machine Learning
 * **model_implementation.py**: Contiene la implementación de un modelo de clasificación logística multiclase y un modelo de *random forest* utilizando la librería *sklearn* en Python. Utiliza el archivo *music_data.csv*.
 
 * **model_implementation_explained.ipynb**: Contiene una descripción más detallada de la implementación de los modelos, y el proceso completo de cómo se encontró la configuración más apropiada para cada uno (selección de variables, grid search, cross-validation, gráficas del error del modelo en función de la complejidad del mismo). Utiliza el archivo *music_data.csv*.
+
+* **ModelEvaluationReport**: Reporte final de la evaluación de los modelos. Análisis del sesgo y la varianza de los resultados, y descripción del manejo de *underfitting* u *overfitting** según correspondiera.
   
 -----------------------------------------
 
