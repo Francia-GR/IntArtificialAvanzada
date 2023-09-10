@@ -241,7 +241,7 @@ def main():
   X = df[df.columns[0:-1]]
   X = np.array(X)
 
-  # y will be whether a song is Rock (10)
+  # y will be whether a song is Pop (9)
   y = df['Class']
   y = y.apply(lambda x: 1 if (x == 9) else 0)
   y = np.array(y)
