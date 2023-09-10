@@ -243,7 +243,7 @@ def main():
 
   # y will be whether a song is Rock (10)
   y = df['Class']
-  y = y.apply(lambda x: 1 if (x == 10) else 0)
+  y = y.apply(lambda x: 1 if (x == 9) else 0)
   y = np.array(y)
 
   # Spliting into train and test
