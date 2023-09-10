@@ -2,8 +2,6 @@
 Implementación de Modelos de Machine Learning
 
 ### **Files**:
-
-* **data_preprocessing.ipynb**: Notebook que presenta el análisis y la limpieza inicial realizado sobre *train.csv* para obtener el archivo *music_data.csv*.
   
 * **regresion_logistica.py**: Contiene la implentación de un modelo de clasificación por regresión logística en Python.
 
@@ -12,9 +10,9 @@ Implementación de Modelos de Machine Learning
 * **model_implementation_explained.ipynb**: Contiene una descripción más detallada de la implementación de los modelo, y el proceso completo de cómo de encontró la configuración más apropiada para cada uno (selección de variables, grid search, cross-validation, gráficas del error del modelo en función de la complejidad del mismo).
   
 
-  
+-----------------------------------------
 
-
+* **data_preprocessing.ipynb**: Notebook que presenta el análisis y la limpieza inicial realizado sobre *train.csv* para obtener el archivo *music_data.csv*.
 
 * **train.csv**: Datos originales tomados de [Music Genre Classification Challenge](https://www.kaggle.com/datasets/purumalgi/music-genre-classification). Solamente se utilizó el set de entrenamiento puesto que, al ser un reto de Kaggle, el set de *test* no tiene los valores reales de las observaciones a predecir.
 
