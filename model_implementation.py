@@ -41,6 +41,8 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 
 # -------------------------------------------------------------------------------------------
 
+
+# Logistic Regression Implementation
 def LogisticRegressionModel():
   model_lr = LogisticRegression(
       penalty='l2',
@@ -101,8 +103,9 @@ def LogisticRegressionModel():
 
 # -------------------------------------------------------------------------------------------
 
-
+# Random Forest Implementation
 def RandomForestModel():
+  # Fitting of model
   model = RandomForestClassifier(n_estimators=200, max_depth = None, random_state=42)
   model.fit(X_train, y_train)
 
@@ -130,6 +133,7 @@ def RandomForestModel():
   best_max_depth = 15
   best_n_estimators = 20
 
+  # Cross Validation for adjusting and evaluating the model.
   rf_classifier = RandomForestClassifier(n_estimators=best_n_estimators, max_depth=best_max_depth, random_state=42)
   print('\nEvaluation based on Predictions from Training Data')
   for metric in ['accuracy', 'precision_macro', 'recall_macro']:
@@ -138,7 +142,7 @@ def RandomForestModel():
 
     # Calculate and print the mean and standard deviation of the cross-validation scores
     print(metric, ': ', round(scores.mean() * 100, 2), '%')
-
+  # Fitting of adjusted model
   rf_classifier.fit(X_train, y_train)
 
   print('\nEvalution based on Predictions from Testing Data:')
@@ -148,7 +152,7 @@ def RandomForestModel():
 
 
 # ------------------------------------------------------------------------------------------
-
+# Fucntion to evaluate a model based on the expected results and the actual results.
 def evaluate(y_true, y_pred):
   # Calculate accuracy
   accuracy = accuracy_score(y_true, y_pred)
