@@ -152,7 +152,7 @@ def RandomForestModel():
 
 
 # ------------------------------------------------------------------------------------------
-# Fucntion to evaluate a model based on the expected results and the actual results.
+# Function to evaluate a model based on the expected results and the actual results.
 def evaluate(y_true, y_pred):
   # Calculate accuracy
   accuracy = accuracy_score(y_true, y_pred)
